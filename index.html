@@ -1,63 +1,37 @@
-<!DOCTYPE html>
-<html>
-<head>
+<div class="container" id="mainPage">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<h1 class="title">I'm Really Sorry ❤️</h1>
 
-<title>Secret Message ❤️</title>
+<div class="loveCard">
+
+<p>
+
+<span class="highlight">My Love,</span>  
+
+I know I made a mistake and hurt you...  
+and for that I am truly sorry.
+
+Every moment without your smile  
+feels empty and incomplete.
+
+You are not just someone special to me…  
+<span class="highlight">you are my happiness.</span>
+
+Please forgive me.
+
+I promise I will try every day  
+to be a better person for you.
+
+<span class="highlight">Because life feels beautiful only when you are with me.</span>
+
+</p>
+
+</div>
+
+</div>
+
 
 <style>
-
-body{
-margin:0;
-font-family:Arial, sans-serif;
-background:#0b0f19;
-color:#ffffff;
-}
-
-/* login */
-
-.login{
-position:absolute;
-top:50%;
-left:50%;
-transform:translate(-50%,-50%);
-background:#111827;
-padding:30px;
-border-radius:20px;
-text-align:center;
-box-shadow:0 10px 40px rgba(0,0,0,0.8);
-width:85%;
-max-width:350px;
-}
-
-input{
-padding:12px;
-border-radius:10px;
-border:none;
-font-size:16px;
-width:90%;
-background:#1f2937;
-color:white;
-margin-top:10px;
-}
-
-button{
-padding:12px 20px;
-margin-top:15px;
-border:none;
-background:#ff4d6d;
-color:white;
-font-size:16px;
-border-radius:20px;
-cursor:pointer;
-}
-
-button:hover{
-background:#ff2e55;
-}
-
-/* main page */
 
 .container{
 display:none;
@@ -68,110 +42,42 @@ left:50%;
 transform:translate(-50%,-50%);
 width:90%;
 max-width:600px;
-background:#111827;
-padding:30px;
-border-radius:20px;
-box-shadow:0 10px 40px rgba(0,0,0,0.8);
 }
 
-h1{
-font-size:36px;
+.title{
+font-size:40px;
 color:#ff4d6d;
+text-shadow:0 0 15px rgba(255,77,109,0.7);
+margin-bottom:20px;
+}
+
+.loveCard{
+
+background:rgba(255,255,255,0.05);
+backdrop-filter:blur(10px);
+border:1px solid rgba(255,255,255,0.1);
+
+padding:30px;
+border-radius:20px;
+
+box-shadow:0 10px 40px rgba(0,0,0,0.6);
+
 }
 
 p{
+
 font-size:18px;
-line-height:1.7;
+line-height:1.8;
 color:#e5e7eb;
+
+}
+
+.highlight{
+
+color:#ff4d6d;
+font-weight:bold;
+font-size:20px;
+
 }
 
 </style>
-</head>
-
-<body>
-
-<div class="login" id="loginBox">
-
-<h2>Enter Secret Password ❤️</h2>
-
-<input type="password" id="password" placeholder="Password">
-
-<br>
-
-<button onclick="checkPassword()">Enter</button>
-
-</div>
-
-
-<div class="container" id="mainPage">
-
-<h1>I'm Really Sorry ❤️</h1>
-
-<p>
-
-My love,
-
-I know I made a mistake and hurt you.  
-That was never my intention.
-
-You are the most important person in my life.  
-Seeing you upset breaks my heart.
-
-Please forgive me.
-
-I promise I will always try to make you happy  
-and never hurt you again.
-
-I love you ❤️
-
-</p>
-
-</div>
-
-
-<audio autoplay loop>
-<source src="https://www2.cs.uic.edu/~i101/SoundFiles/CanonInD.mp3" type="audio/mp3">
-</audio>
-
-
-<script>
-
-let wrongCount = 0;
-
-function checkPassword(){
-
-var pass=document.getElementById("password").value;
-
-if(pass=="forever"){
-
-document.getElementById("loginBox").style.display="none";
-document.getElementById("mainPage").style.display="block";
-
-}else{
-
-wrongCount++;
-
-if(wrongCount==1){
-alert("Yahi pyaar hai Sannu 🥹");
-}
-
-else if(wrongCount==2){
-alert("Dusri baar bhi galat 😭😭😭");
-}
-
-else if(wrongCount==3){
-alert("tum pyaar hi nii krti 😭😭");
-}
-
-else{
-alert("Phirse 😭😭");
-}
-
-}
-
-}
-
-</script>
-
-</body>
-</html>
