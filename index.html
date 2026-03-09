@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>For Someone Special ❤️</title>
 
 <style>
 
 body{
 margin:0;
-font-family:Arial;
+font-family:Arial, sans-serif;
 background:linear-gradient(135deg,#ff758c,#ff7eb3);
 overflow:hidden;
 }
 
-/* login page */
+/* login */
 
 .login{
 position:absolute;
@@ -20,31 +23,35 @@ top:50%;
 left:50%;
 transform:translate(-50%,-50%);
 background:white;
-padding:40px;
+padding:30px;
 border-radius:20px;
 text-align:center;
 box-shadow:0 10px 30px rgba(0,0,0,0.2);
+width:85%;
+max-width:350px;
 }
 
 input{
-padding:10px;
+padding:12px;
 border-radius:10px;
 border:1px solid gray;
 font-size:16px;
+width:90%;
 }
 
 button{
-padding:10px 20px;
-margin-top:10px;
+padding:12px 20px;
+margin-top:15px;
 border:none;
 background:#ff4d6d;
 color:white;
 font-size:16px;
 border-radius:20px;
 cursor:pointer;
+width:120px;
 }
 
-/* main page */
+/* main */
 
 .container{
 display:none;
@@ -54,19 +61,21 @@ position:absolute;
 top:50%;
 left:50%;
 transform:translate(-50%,-50%);
-width:70%;
+width:90%;
+max-width:600px;
+padding:10px;
 }
 
 h1{
-font-size:50px;
+font-size:35px;
 }
 
 p{
-font-size:20px;
+font-size:18px;
 line-height:1.6;
 }
 
-/* falling hearts */
+/* hearts */
 
 .heart{
 position:fixed;
@@ -86,8 +95,6 @@ transform:translateY(100vh);
 
 <body>
 
-<!-- login -->
-
 <div class="login" id="loginBox">
 
 <h2>Enter Secret Password ❤️</h2>
@@ -101,33 +108,29 @@ transform:translateY(100vh);
 </div>
 
 
-<!-- main apology page -->
-
 <div class="container" id="mainPage">
 
 <h1>I'm Really Sorry ❤️</h1>
 
 <p id="apologyText">
 
-My love,  
-I know I hurt you and I regret it deeply.
+My love,
 
-You are the most beautiful part of my life and losing your smile
-is the worst feeling for me.
+I know I made a mistake and hurt you.  
+That was never my intention.
 
-Every moment without talking to you feels empty.
+You mean the world to me and seeing you upset
+breaks my heart.
 
 Please forgive me.  
-I promise I will try my best to be better for you.
+I promise I will always try to make you happy.
 
-I love you so much ❤️
+I love you ❤️
 
 </p>
 
 </div>
 
-
-<!-- music -->
 
 <audio id="music" autoplay loop>
 <source src="https://www2.cs.uic.edu/~i101/SoundFiles/CanonInD.mp3" type="audio/mp3">
@@ -135,8 +138,6 @@ I love you so much ❤️
 
 
 <script>
-
-/* password */
 
 function checkPassword(){
 
@@ -175,7 +176,7 @@ window.speechSynthesis.speak(speech);
 }
 
 
-/* hearts animation */
+/* hearts */
 
 function startHearts(){
 
