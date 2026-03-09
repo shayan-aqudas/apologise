@@ -11,9 +11,9 @@
 body{
 margin:0;
 font-family:Arial, sans-serif;
-background:linear-gradient(135deg,#ff758c,#ff7eb3);
+background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+color:white;
 overflow:hidden;
-  color: black;
 }
 
 /* login */
@@ -23,11 +23,11 @@ position:absolute;
 top:50%;
 left:50%;
 transform:translate(-50%,-50%);
-background:white;
+background:#1e1e2f;
 padding:30px;
 border-radius:20px;
 text-align:center;
-box-shadow:0 10px 30px rgba(0,0,0,0.2);
+box-shadow:0 10px 30px rgba(0,0,0,0.6);
 width:85%;
 max-width:350px;
 }
@@ -35,9 +35,10 @@ max-width:350px;
 input{
 padding:12px;
 border-radius:10px;
-border:1px solid gray;
+border:none;
 font-size:16px;
 width:90%;
+margin-top:10px;
 }
 
 button{
@@ -49,7 +50,6 @@ color:white;
 font-size:16px;
 border-radius:20px;
 cursor:pointer;
-width:120px;
 }
 
 /* main */
@@ -57,23 +57,12 @@ width:120px;
 .container{
 display:none;
 text-align:center;
-color:white;
 position:absolute;
 top:50%;
 left:50%;
 transform:translate(-50%,-50%);
 width:90%;
 max-width:600px;
-padding:10px;
-}
-
-h1{
-font-size:35px;
-}
-
-p{
-font-size:18px;
-line-height:1.6;
 }
 
 /* hearts */
@@ -81,7 +70,7 @@ line-height:1.6;
 .heart{
 position:fixed;
 top:-10px;
-color:red;
+color:#ff4d6d;
 animation:fall linear infinite;
 }
 
@@ -89,6 +78,15 @@ animation:fall linear infinite;
 to{
 transform:translateY(100vh);
 }
+}
+
+h1{
+font-size:36px;
+}
+
+p{
+font-size:18px;
+line-height:1.7;
 }
 
 </style>
@@ -113,15 +111,16 @@ transform:translateY(100vh);
 
 <h1>I'm Really Sorry ❤️</h1>
 
-<p id="apologyText">
+<p>
 
 My love,
 
 I know I made a mistake and hurt you.  
 That was never my intention.
 
-You mean the world to me and seeing you upset
-breaks my heart.
+You mean everything to me and I hate seeing you sad.
+
+Every moment without you feels incomplete.
 
 Please forgive me.  
 I promise I will always try to make you happy.
@@ -133,7 +132,7 @@ I love you ❤️
 </div>
 
 
-<audio id="music" autoplay loop>
+<audio autoplay loop>
 <source src="https://www2.cs.uic.edu/~i101/SoundFiles/CanonInD.mp3" type="audio/mp3">
 </audio>
 
@@ -150,7 +149,6 @@ document.getElementById("loginBox").style.display="none";
 document.getElementById("mainPage").style.display="block";
 
 startHearts();
-speakText();
 
 }else{
 
@@ -159,25 +157,6 @@ alert("Wrong Password 😢");
 }
 
 }
-
-
-/* speech */
-
-function speakText(){
-
-let text=document.getElementById("apologyText").innerText;
-
-let speech=new SpeechSynthesisUtterance(text);
-
-speech.rate=0.9;
-speech.pitch=1;
-
-window.speechSynthesis.speak(speech);
-
-}
-
-
-/* hearts */
 
 function startHearts(){
 
