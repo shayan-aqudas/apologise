@@ -13,7 +13,6 @@ margin:0;
 font-family:Arial, sans-serif;
 background:#0b0f19;
 color:#ffffff;
-overflow:hidden;
 }
 
 /* login */
@@ -86,21 +85,6 @@ line-height:1.7;
 color:#e5e7eb;
 }
 
-/* hearts */
-
-.heart{
-position:fixed;
-top:-10px;
-color:#ff4d6d;
-animation:fall linear infinite;
-}
-
-@keyframes fall{
-to{
-transform:translateY(100vh);
-}
-}
-
 </style>
 </head>
 
@@ -152,6 +136,8 @@ I love you ❤️
 
 <script>
 
+let wrongCount = 0;
+
 function checkPassword(){
 
 var pass=document.getElementById("password").value;
@@ -161,38 +147,27 @@ if(pass=="forever"){
 document.getElementById("loginBox").style.display="none";
 document.getElementById("mainPage").style.display="block";
 
-startHearts();
-
 }else{
 
-alert("Wrong Password 😢");
+wrongCount++;
 
+if(wrongCount==1){
+alert("Yahi pyaar hai Sannu 🥹");
+}
+
+else if(wrongCount==2){
+alert("Dusri baar bhi galat 😭😭😭");
+}
+
+else if(wrongCount==3){
+alert("tum pyaar hi nii krti 😭😭");
+}
+
+else{
+alert("Phirse 😭😭");
 }
 
 }
-
-
-function startHearts(){
-
-setInterval(function(){
-
-let heart=document.createElement("div");
-
-heart.className="heart";
-
-heart.innerHTML="❤️";
-
-heart.style.left=Math.random()*100+"vw";
-
-heart.style.fontSize=(Math.random()*20+20)+"px";
-
-heart.style.animationDuration=(Math.random()*3+3)+"s";
-
-document.body.appendChild(heart);
-
-setTimeout(()=>{heart.remove()},5000);
-
-},300);
 
 }
 
